@@ -179,6 +179,7 @@ for (let i = 1; i < 8; i++) {
 }
 console.log(`El promedio de precipitaciones esta semana es de ${promedioLluvia/7}. La cantidad de dias sin lluvia fue de ${diasSinLluvia}`)
 
+// Ejercicio 7 en index.html
 
 // // Ejercicio 8
 

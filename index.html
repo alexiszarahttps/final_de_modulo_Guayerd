@@ -1,12 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividades de final de módulo</title>
-</head>
-<body>
-    <script src="app.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css">
+		<title>Actividades de final de módulo</title>
+	</head>
+	<body>
+		<div class="Contenedor">
+			<h1>Liga de la Justicia Joven</h1>
+			<h2>Formularo de Inscripcion</h2>
+
+			<div>
+				<form class="formulario">
+					<div>
+						<label for="sname">Nombre de Superheroe</label>
+						<input type="password" id="sname" name="sname" required />
+					</div>
+
+					<div>
+						<label for="mail">Email</label>
+						<input type="email" id="Email" name="Email" required />
+					</div>
+
+					<div>
+						<label for="telefono">telefono</label>
+						<input
+							type="tel"
+							id="telefono"
+							name="telefono"
+							placeholder="(Código de área) Número"
+							required
+						/>
+					</div>
+
+					<div>
+						<label for="nacimiento">Fecha de Nacimiento</label>
+						<input type="date" name="nacimiento" required />
+					</div>
+
+					<div>
+						<label for="sFav">Superheroe Favorito</label>
+						<select name="sFav" id="sFav">
+							<option value="---">---</option>
+							<option value="spiderman">Spiderman</option>
+							<option value="batman">Batman</option>
+							<option value="superman">Superman</option>
+							<option value="ironman">Iron-Man</option>
+							<option value="flash">Flash</option>
+							<option value="GA">Green Arrow</option>
+						</select>
+					</div>
+
+					<div>
+						<label for="superpoder">Superpoder</label>
+						<textarea name="superpoder" id="" cols="30" rows="10"></textarea>
+					</div>
+
+					<div class="aaa">
+						<label for="color">Color de Traje</label>
+						<input type="color" name="color" id="color" />
+
+						<div class="check">
+							<input type="checkbox" name="check" />
+							<label for="check"
+								>Participo con anterioridad en una asociacion de heroes?</label
+							>
+						</div>
+
+						<input type="submit" class="enviar" />
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script src="app.js"></script>
+	</body>
 </html>

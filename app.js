@@ -140,4 +140,92 @@ if (puntajeJugador1 > puntajeJugador2) {
 	console.log('El resultado es un empate');
 }
 
+Ejercicio 5
+
+let p = 0;
+let ingredienteActual = 0;
+let ingredientes =[ 
+     ["Harina",60],
+     ["Huevos",3],
+     ["Manteca",100],
+     ["Chocolate",150],
+     ["Azucar",400]
+ ];
+ 
+for (let i = 0; i < ingredientes.length; i++) {
+    ingredienteActual = prompt(`Cuanta ${ingredientes[p][0]} tenes?`);
+    if(ingredientes[p][1] > ingredienteActual){
+        console.log(`Te faltan ${ingredientes[p][1] - ingredienteActual} de ${ingredientes[p][0]} `)
+    } else{
+        console.log(`Tenes la cantidad de ${ingredientes[p][0]} suficiente`)
+    }
+
+    p++
+}
+
+Ejercicio 6
+
+let diasSinLluvia = 0;
+let promedioLluvia = 0;
+let sumaLluvia = 0;
+
+for (let i = 1; i < 8; i++) {
+    sumaLluvia = prompt(`Ingresar datos de precepitaciones en mm dia ${i}`);
+
+    promedioLluvia += parseInt(sumaLluvia)
+    if(sumaLluvia == 0){
+        diasSinLluvia++
+    }    
+}
+console.log(`El promedio de precipitaciones esta semana es de ${promedioLluvia/7}. La cantidad de dias sin lluvia fue de ${diasSinLluvia}`)
+
+
+// // Ejercicio 8
+
+let entradaGen = 10;
+let entradaEsp = 5;
+let entradaVip = 2;
+let entradaComprar = "";
+let cantidadComprar = "";
+let precioFinal = 0;
+let recaudacionTotal = 0;
+let confirmacion = false;
+
+do{
+    entradaComprar = prompt("Que tipo de entrada queres comprar?");
+    cantidadComprar = prompt("Cuantas entradas queres comprar?");
+
+    if(entradaComprar == "general"){
+       if(entradaGen >= cantidadComprar){
+            precioFinal = 250 * parseInt(cantidadComprar);
+            recaudacionTotal = parseInt(recaudacionTotal) + parseInt(precioFinal);
+            entradaGen =- parseInt(cantidadComprar);
+            console.log(`El precio final es de ${precioFinal}`);
+       } else if(entradaGen < cantidadComprar){
+           console.log("No hay suficiente cantidad de entradas disponibles")
+       }
+    }else if(entradaComprar == "especial"){
+        if(entradaEsp >= cantidadComprar){
+            precioFinal = 400 * parseInt(cantidadComprar);
+            recaudacionTotal = parseInt(recaudacionTotal) + parseInt(precioFinal);
+            entradaEsp =- parseInt(cantidadComprar);
+            console.log(`El precio final es de ${precioFinal}`)
+       } else if(entradaEsp < cantidadComprar){
+           console.log("No hay suficiente cantidad de entradas disponibles")
+       }
+    }else if(entradaComprar == "vip"){
+        if(entradaVip >= cantidadComprar){
+            precioFinal = 900 * parseInt(cantidadComprar);
+            recaudacionTotal = parseInt(recaudacionTotal) + parseInt(precioFinal);
+            entradaVip =- parseInt(cantidadComprar);
+            console.log(`El precio final es de ${precioFinal}`)
+       } else if(entradaVip < cantidadComprar){
+           console.log("No hay suficiente cantidad de entradas disponibles")
+       }
+    }
+
+    confirmacion = confirm("Desea realizar otra compra?")
+} while(confirmacion == true);
+console.log(`El total de la compra fue de ${recaudacionTotal}$`)
+
 */
